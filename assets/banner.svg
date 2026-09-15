@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 20px; fill: #9ca3af; }
+    .tag { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 14px; fill: #60a5fa; }
+    .pulse-dot { animation: pulse 2s infinite alternate; }
+    .wave-line { animation: dash 8s linear infinite; stroke-dasharray: 10, 5; }
+    @keyframes pulse {
+      0% { r: 6px; opacity: 0.6; }
+      100% { r: 10px; opacity: 1; filter: drop-shadow(0 0 8px #3b82f6); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -150; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg-grad)" stroke="#374151" stroke-width="2" />
+
+  <!-- Grid overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="200" y1="0" x2="200" y2="300" />
+    <line x1="400" y1="0" x2="400" y2="300" />
+    <line x1="600" y1="0" x2="600" y2="300" />
+    <line x1="800" y1="0" x2="800" y2="300" />
+    <line x1="1000" y1="0" x2="1000" y2="300" />
+  </g>
+
+  <!-- Dynamic Machine Health Waveform Graphic -->
+  <path d="M 50 200 Q 150 220 250 180 T 450 190 T 650 120 T 750 240 T 850 80 T 950 210 T 1150 180" fill="none" stroke="url(#accent-grad)" stroke-width="4" filter="url(#glow)" class="wave-line" />
+  
+  <!-- Anomaly Detection Points -->
+  <circle cx="650" cy="120" r="8" fill="#ef4444" class="pulse-dot" />
+  <circle cx="850" cy="80" r="8" fill="#f59e0b" class="pulse-dot" />
+  <circle cx="450" cy="190" r="6" fill="#10b981" />
+  <circle cx="250" cy="180" r="6" fill="#3b82f6" />
+
+  <!-- Decorative Badge Icon -->
+  <g transform="translate(60, 50)">
+    <rect width="48" height="48" rx="12" fill="#3b82f6" fill-opacity="0.2" stroke="#60a5fa" stroke-width="2" />
+    <path d="M 16 32 L 24 16 L 32 32 Z M 20 28 L 28 28" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Title & Text -->
+  <text x="125" y="85" class="title">Awesome Predictive Maintenance Platform 🛠️⚡</text>
+  <text x="125" y="125" class="subtitle">Curated Industrial AI, Asset Reliability, Anomaly Detection & Sensor Analytics</text>
+
+  <!-- Category Pills -->
+  <g transform="translate(60, 230)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="80" y="21" class="tag" text-anchor="middle">📡 IIoT & Sensors</text>
+
+    <!-- Pill 2 -->
+    <rect x="175" y="0" width="190" height="32" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5" />
+    <text x="270" y="21" class="tag" text-anchor="middle" fill="#c084fc">🤖 Machine Health AI</text>
+
+    <!-- Pill 3 -->
+    <rect x="380" y="0" width="180" height="32" rx="16" fill="#1e293b" stroke="#ec4899" stroke-width="1.5" />
+    <text x="470" y="21" class="tag" text-anchor="middle" fill="#f472b6">📈 Anomaly Detection</text>
+
+    <!-- Pill 4 -->
+    <rect x="575" y="0" width="160" height="32" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <text x="655" y="21" class="tag" text-anchor="middle" fill="#34d399">⭐ Open-Source & SaaS</text>
+  </g>
+</svg>
