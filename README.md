@@ -75,6 +75,9 @@ The self-hosted PostgreSQL ecosystem features world-class open-source projects. 
 - **[pg_stat_monitor](https://github.com/percona/pg_stat_monitor)** [![GitHub_Stars](https://img.shields.io/github/stars/percona/pg_stat_monitor?style=social&color=white)](https://github.com/percona/pg_stat_monitor/stargazers) 🕵️  
   Advanced query performance stats collector extension by Percona providing time-bucketed metrics, query plan capturing, and histogram distribution.
 
+- **[RowSafe CLI](https://github.com/rowsafe/rowsafe)** [![GitHub_Stars](https://img.shields.io/github/stars/rowsafe/rowsafe?style=social&color=white)](https://github.com/rowsafe/rowsafe/stargazers) 🔎  
+  Apache-2.0 PostgreSQL CLI and local MCP server for health scores, query and index insights, live activity, tuning recommendations and revalidated fixes through a direct database connection.
+
 - **[pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html)** 📑  
   Built-in core PostgreSQL module that tracks execution statistics of all SQL statements — the foundational engine powering almost all monitoring tools.
 
